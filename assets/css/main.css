@@ -2420,9 +2420,10 @@ button:disabled,
   }
 }
 
-/* Image */
+/* Video */
 .video {
   border: 0;
+  display: inline-block;
   position: relative;
 }
 .video img {
