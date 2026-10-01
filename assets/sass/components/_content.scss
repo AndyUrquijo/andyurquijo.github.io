@@ -4,9 +4,9 @@
 /// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 ///
 
-/* Video */
+/* Content */
 
-	.video {
+	.content {
 		border: 0;
 		display: inline-block;
 		position: relative;
@@ -19,9 +19,6 @@
 		&.right {
 			max-width: 30%;
 
-			img {
-				width: 100%;
-			}
 		}
 
 		&.left {
@@ -41,9 +38,6 @@
 			margin: 0 0 _size(element-margin) 0;
 			width: 100%;
 
-			img {
-				width: 100%;
-			}
 		}
 
 		&.main {
@@ -51,9 +45,6 @@
 			margin: (_size(element-margin) * 1.25) 0;
 			width: 100%;
 
-			img {
-				width: 100%;
-			}
 
 			@include breakpoint('<=small') {
 				margin: (_size(element-margin) * 0.75) 0;
