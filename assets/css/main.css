@@ -2203,9 +2203,9 @@ button:disabled,
   z-index: 3;
 }
 .tiles article .content {
-  -moz-filter: blur(0.3em);
-  -ms-filter: blur(0.3em);
-  filter: blur(0.3em);
+  -moz-filter: blur(0.2em);
+  -ms-filter: blur(0.2em);
+  filter: blur(0.2em);
   transition: filter .5s ease;
   position: absolute;
   inset: 0;
@@ -2437,7 +2437,7 @@ button:disabled,
   height: 100%;
 }
 .content .video-background {
-  filter: blur(2em);
+  filter: blur(1.5em);
   opacity: 0.6;
   z-index: 0;
   position: absolute;

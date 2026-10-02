@@ -50,7 +50,7 @@
 			}
 
 			.content {
-				@include vendor('filter', 'blur(0.3em)');
+				@include vendor('filter', 'blur(0.2em)');
 				@include vendor('transition', 'filter .5s ease');
 				position: absolute;
 				inset: 0;
