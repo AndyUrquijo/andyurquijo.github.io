@@ -2185,7 +2185,6 @@ button:disabled,
   display: flex;
   transition: transform 0.25s ease, opacity 0.25s ease;
   background-color: color-mix(in srgb, var(--tile-background) 100%, #242943);
-  padding: 4em 4em 2em 4em;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -2197,10 +2196,8 @@ button:disabled,
   position: relative;
   width: 60%;
 }
-.tiles article header {
+.tiles article .title {
   transition: opacity 1s ease;
-  position: relative;
-  z-index: 3;
 }
 .tiles article .content {
   -moz-filter: blur(0.2em);
@@ -2213,11 +2210,9 @@ button:disabled,
   display: flex;
   justify-content: center;
 }
-.tiles article h3 {
-  font-size: 1.75em;
-}
-.tiles article h3 a:hover {
-  color: inherit !important;
+.tiles article .description {
+  transition: opacity .2s ease;
+  opacity: 0;
 }
 .tiles article .link.primary {
   border: 0;
@@ -2251,10 +2246,10 @@ button:disabled,
   width: 100%;
   z-index: 1;
 }
-.tiles article:hover header {
+.tiles article:hover:before {
   opacity: 0;
 }
-.tiles article:hover:before {
+.tiles article:hover .title {
   opacity: 0;
 }
 .tiles article:hover .content {
@@ -2262,6 +2257,10 @@ button:disabled,
   -moz-filter: blur(0.0em);
   -ms-filter: blur(0.0em);
   filter: blur(0.0em);
+}
+.tiles article:hover .description {
+  transition: opacity 2s ease;
+  opacity: 1;
 }
 .tiles article:nth-child(4n-1), .tiles article:nth-child(4n-2) {
   width: 40%;
@@ -2484,6 +2483,42 @@ button:disabled,
   z-index: 1;
   width: 100%;
   height: 100%;
+}
+
+/* Description */
+.description {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 5;
+  height: 100%;
+  width: 400px;
+  right: 50px;
+}
+.description:after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: calc(150% + 50px);
+  left: calc(-50% + 50px);
+  z-index: -1;
+  background-image: url("../../../images/DescriptionBack.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Title */
+.title {
+  position: absolute;
+  left: 60px;
+  z-index: 7;
+  justify-content: left;
+}
+.title h3 {
+  font-size: 1.75em;
 }
 
 /* Header */

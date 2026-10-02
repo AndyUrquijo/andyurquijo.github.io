@@ -31,7 +31,6 @@
 			//background-color:bg; 
 			//background-color: var(--tile-background);
 			background-color: color-mix(in srgb, var(--tile-background) 100%, #242943);
-			@include padding(4em, 4em);
 			background-position: center;
 			background-repeat: no-repeat;
 			background-size: cover;
@@ -43,10 +42,9 @@
 			position: relative;
 			width: 60%;
 
-			header {
+			.title {
 				@include vendor('transition', 'opacity 1s ease');
-				position: relative;
-				z-index: 3;
+
 			}
 
 			.content {
@@ -59,15 +57,12 @@
 			    justify-content: center;
 			}
 
-			h3 {
-				font-size: 1.75em;
-
-				a {
-					&:hover {
-						color: inherit !important;
-					}
-				}
+			.description {
+				@include vendor('transition', 'opacity .2s ease');
+				opacity: 0;
 			}
+
+
 
 			.link.primary {
 				border: 0;
@@ -107,15 +102,22 @@
 			}
 
 			&:hover {
-				header{
-					opacity: 0;
-				}
+
 				&:before {
 					opacity: 0; // 0->1 = invisible->visible text when hovering
+				}
+
+				.title{
+					opacity: 0;
 				}
 				.content {
 					opacity: 1;
 					@include vendor('filter', 'blur(0.0em)');
+				}
+
+				.description {
+					@include vendor('transition', 'opacity 2s ease');
+					opacity: 1;
 				}
 
 			}
