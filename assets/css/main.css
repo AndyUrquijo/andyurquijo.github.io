@@ -2496,6 +2496,14 @@ button:disabled,
   height: 100%;
   width: 400px;
   right: 50px;
+  font-size: 1em;
+}
+@media screen and (max-width: 980px) {
+  .description {
+    font-size: 0.7em;
+    width: 300px;
+    right: 0px;
+  }
 }
 .description:after {
   content: "";
