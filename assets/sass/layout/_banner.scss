@@ -8,7 +8,7 @@
 
 	#banner {
 		@include vendor('align-items', 'center');
-		@include vendor('background-image', 'url("../../images/banner.jpg")');
+		@include vendor('background-image', 'url("../../images/Banner.jpeg")');
 		@include vendor('display', 'flex');
 		@include padding(4em, 0, (2em, 0, 0, 0));
 		background-attachment: fixed;
@@ -22,8 +22,8 @@
 		max-height: 32em;
 		min-height: 22em;
 		position: relative;
-		top: -3.25em;
-
+		box-shadow: inset 0 0 0 12px magenta;
+		z-index: -5;
 		&:after {
 			@include vendor('transition', 'opacity #{_duration(banner)} ease');
 			@include vendor('transition-delay', '0.75s');
@@ -123,18 +123,25 @@
 			}
 		}
 
-		@include breakpoint('<=large') {
-			background-attachment: scroll;
+		@include breakpoint('<=xlarge') {
+			box-shadow: inset 0 0 0 15px orange;
 		}
-
+		@include breakpoint('<=large') {
+			box-shadow: inset 0 0 0 15px yellow;
+			background-attachment: scroll;
+			top: -5em;
+		}
+		@include breakpoint('<=medium') {
+			box-shadow: inset 0 0 0 15px green;
+		}
 		@include breakpoint('<=small') {
+			box-shadow: inset 0 0 0 15px blue;
 			@include padding(3em, 0, (2em, 0, 0, 0));
 			height: auto;
 			margin-bottom: -2.75em;
 			max-height: none;
 			min-height: 0;
 			top: -2.75em;
-
 			h1 {
 				font-size: 2em;
 			}
@@ -158,8 +165,8 @@
 		}
 
 		@include breakpoint('<=xsmall') {
+			box-shadow: inset 0 0 0 15px red;
 			@include padding(4em, 0, (2em, 0, 0, 0));
-
 			> .inner {
 				.content {
 					p {

@@ -2733,7 +2733,7 @@ body.is-preload #header.alt {
   -moz-align-items: center;
   -ms-align-items: center;
   align-items: center;
-  background-image: url("../../images/banner.jpg");
+  background-image: url("../../images/Banner.jpeg");
   display: -moz-flex;
   display: -ms-flex;
   display: flex;
@@ -2749,7 +2749,8 @@ body.is-preload #header.alt {
   max-height: 32em;
   min-height: 22em;
   position: relative;
-  top: -3.25em;
+  box-shadow: inset 0 0 0 12px magenta;
+  z-index: -5;
 }
 #banner:after {
   transition: opacity 2.5s ease;
@@ -2845,13 +2846,26 @@ body.is-preload #banner > .inner {
   transform: translateX(-0.5em);
   opacity: 0;
 }
+@media screen and (max-width: 1680px) {
+  #banner {
+    box-shadow: inset 0 0 0 15px orange;
+  }
+}
 @media screen and (max-width: 1280px) {
   #banner {
+    box-shadow: inset 0 0 0 15px yellow;
     background-attachment: scroll;
+    top: -5em;
+  }
+}
+@media screen and (max-width: 980px) {
+  #banner {
+    box-shadow: inset 0 0 0 15px green;
   }
 }
 @media screen and (max-width: 736px) {
   #banner {
+    box-shadow: inset 0 0 0 15px blue;
     padding: 5em 0 1em 0;
     height: auto;
     margin-bottom: -2.75em;
@@ -2877,6 +2891,7 @@ body.is-preload #banner > .inner {
 }
 @media screen and (max-width: 480px) {
   #banner {
+    box-shadow: inset 0 0 0 15px red;
     padding: 6em 0 2em 0;
   }
   #banner > .inner .content p br {
@@ -3011,7 +3026,6 @@ body.is-preload #banner > .inner {
 /* Wrapper */
 #wrapper {
   transition: filter 0.35s ease, opacity 0.375s ease-out;
-  padding-top: 3.25em;
 }
 #wrapper.is-transitioning {
   opacity: 0;
