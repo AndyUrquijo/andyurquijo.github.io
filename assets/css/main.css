@@ -2262,6 +2262,7 @@ button:disabled,
 .tiles article:hover .description {
   transition: opacity 2s ease;
   opacity: 1;
+  pointer-events: inherit;
 }
 .tiles article:nth-child(4n-1), .tiles article:nth-child(4n-2) {
   width: 40%;
