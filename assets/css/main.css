@@ -2290,6 +2290,9 @@ button:disabled,
   .tiles article h3 {
     font-size: 1.5em;
   }
+  .tiles article .description {
+    font-size: 0.7em;
+  }
 }
 @media screen and (max-width: 480px) {
   .tiles {
